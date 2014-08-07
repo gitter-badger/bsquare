@@ -25,6 +25,29 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
 
+    // less: {
+    //     development: {
+    //         options: {
+    //             compress: true,
+    //             yuicompress: true,
+    //             optimization: 2
+    //         },
+    //         files: {
+    //             // target.css file: source.less file
+    //             "styles/style.css": "styles/less/style.less"
+    //         }
+    //     }
+    // },
+
+    // compass: {
+    //     files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+    //     tasks: ['compass:server']
+    // },
+    // recess: {
+    //     files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
+    //     tasks: ['recess:dist']
+    // },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -143,7 +166,7 @@ module.exports = function (grunt) {
       }
     },
 
-    // Automatically inject Bower components into the app
+    // Automatically inject Bower onents into the app
     bowerInstall: {
       app: {
         src: ['<%= yeoman.app %>/index.html'],
@@ -306,6 +329,44 @@ module.exports = function (grunt) {
       ]
     },
 
+    //   compass: {
+    //     options: {
+    //         sassDir: '<%= yeoman.app %>/styles',
+    //         cssDir: '.tmp/styles',
+    //         generatedImagesDir: '.tmp/images/generated',
+    //         imagesDir: '<%= yeoman.app %>/images',
+    //         javascriptsDir: '<%= yeoman.app %>/scripts',
+    //         fontsDir: '<%= yeoman.app %>/styles/fonts',
+    //         importPath: '<%= yeoman.app %>/bower_components',
+    //         httpImagesPath: '/images',
+    //         httpGeneratedImagesPath: '/images/generated',
+    //         httpFontsPath: '/styles/fonts',
+    //         relativeAssets: false
+    //     },
+    //     dist: {},
+    //     server: {
+    //         options: {
+    //             debugInfo: true
+    //         }
+    //     }
+    // },
+    recess: {
+        options: {
+            compile: true
+        },
+        dist: {
+            files: [{
+                expand: true,
+                cwd: '<%= yeoman.app %>/styles/less',
+                src: '{,*/}*.less',
+                dest: 'styles/css/',
+                ext: '.css'
+            }]
+        }
+    },
+
+
+
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
@@ -332,6 +393,7 @@ module.exports = function (grunt) {
     //   dist: {}
     // },
 
+
     // Test settings
     karma: {
       unit: {
@@ -341,6 +403,8 @@ module.exports = function (grunt) {
     }
   });
 
+  // grunt.loadNpmTasks('grunt-contrib-less');
+  // grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
@@ -354,6 +418,7 @@ module.exports = function (grunt) {
       'autoprefixer',
       'connect:livereload',
       'watch'
+
     ]);
   });
 

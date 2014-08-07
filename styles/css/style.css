@@ -1,0 +1,127 @@
+/* Space out content a bit */
+
+b,
+strong,
+h1 {
+  font-weight: normal;
+}
+
+body {
+  background: #FFCCFF;
+}
+
+.container {
+  padding: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .col-lg-3 {
+    border-radius: 6px 0 0px 6px;
+  }
+  .col-lg-9 {
+    border-radius: 0 6px 6px 6px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .col-lg-3 {
+    border-radius: 6px 6px 0 0px;
+  }
+  .col-lg-9 {
+    border-radius: 0 0px 6px 6px;
+  }
+}
+
+.results {
+  text-align: center;
+}
+
+.le-steps .col-lg-3,
+.le-steps .col-lg-9 {
+  padding: 30px;
+}
+
+.le-steps > .col-lg-3 {
+  background: #151515;
+}
+
+.le-steps > .col-lg-9 {
+  background: #2f2f2f;
+}
+
+.le-steps {
+  color: #ffffff;
+}
+
+.le-steps .form-group {
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.le-steps h1 {
+  font-size: 26px;
+  text-align: center;
+}
+
+.list-steps {
+  padding-top: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .list-steps li > a * {
+    display: inline-block;
+  }
+  .list-steps b {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .list-steps {
+    text-align: center;
+  }
+  .list-steps b {
+    margin-right: auto;
+    margin-bottom: 9px;
+    margin-left: auto;
+  }
+  .list-steps li {
+    display: inline-block;
+    padding: 0 10px;
+    text-align: center;
+  }
+}
+
+.list-steps li {
+  margin-bottom: 10px;
+}
+
+.list-steps li.active b {
+  background: #00bc8c;
+}
+
+.list-steps li a {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.list-steps li a:hover {
+  text-decoration: none;
+}
+
+.list-steps b {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 40px;
+  text-align: center;
+  background: #000000;
+  border-radius: 60px;
+}
+
+.list-steps strong {
+  font-size: 12px;
+}

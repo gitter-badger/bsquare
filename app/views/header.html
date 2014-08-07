@@ -1,3 +1,8 @@
-<h1>Let's be friend</h1>
-<a href="#/profile">Profile</a>
-<a href="#/interests">Interests</a>
+<div>
+	<h1>Let's be friends</h1>
+	<ul class="list-unstyled list-steps">
+		<li ng-class="{active:isActive('/profile')}"><a href="#/profile"><b>1</b><strong>Profile</strong></a></li>
+		<li ng-class="{active:isActive('/interests')}"><a href="#/interests"><b>2</b><strong>Interests</strong></a></li>
+		<li ng-class="{active:isActive('/payment')}"><a href="#/payment"><b>3</b><strong>Payment</strong></a></li>
+	</ul>
+</div>

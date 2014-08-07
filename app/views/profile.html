@@ -1,7 +1,32 @@
-<div>
-  <header ng-include src="'./views/header.html'">
-  </header> 
-  <div>Name <input type="text" ng-model="customer.name"/></div>
-  <div>Email <input type="text" ng-model="customer.email"/></div>
-  <button ng-click="moveTo('/interests')">Next section</button>
+<div class="row le-steps">
+	
+	<div class="col-lg-3">
+		<header ng-include src="'views/header.html'"></header>
+	</div>
+	
+	<div class="col-lg-9">
+
+		<div class="form-group">
+	    <label>Name</label>
+	    <input type="text" ng-model="customer.name" class="form-control" placeholder="Enter name">
+	  </div>
+
+		<div class="form-group">
+	    <label>Email</label>
+	    <input type="email" ng-model="customer.email" class="form-control" placeholder="Enter email">
+	  </div>
+
+		<div class="form-group">
+	    <label>City </label>
+	    <input type="text" id="Autocomplete" ng-model="customer.city" class="form-control" ng-autocomplete="result1" details="details1" options="options1"/>
+	  </div>
+
+		<div class="form-group">
+			<button type="button" class="btn btn-primary" ng-click="moveTo('/interests')">Next Section
+			  <span class="glyphicon glyphicon-arrow-right"></span>
+			</button>
+	  </div>
+
+	</div> <!-- / .col-lg-9 -->
+
 </div>

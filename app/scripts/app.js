@@ -4,6 +4,7 @@ angular
   .module('projectsApp', [
     'ngRoute',
     'ngCookies',
+    'ngAutocomplete',
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -15,7 +16,12 @@ angular
         templateUrl: 'views/interests.html',
         controller: 'MainController'
       })
+      .when('/payment', {
+        templateUrl: 'views/payment.html',
+        controller: 'MainController'
+      })
       .otherwise({
         redirectTo: '/profile'
       });
   });
+  

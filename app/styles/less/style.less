@@ -1,0 +1,101 @@
+/* Space out content a bit */
+// @import "../bower_components/bootstrap/less/variables.less";
+@screen-lg: 1200px;
+
+@white: #FFFFFF;
+@black: #000000;
+@green: #00bc8c;
+@palegrey: #2f2f2f;
+@dark: #151515;
+
+b, strong, h1 { font-weight: normal; }
+
+body {
+	background: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+	padding: 30px;
+}
+
+
+@media screen and (min-width: @screen-lg) {
+  .col-lg-3 { border-radius: 6px 0px 0px 6px; }
+  .col-lg-9 { border-radius: 0px 6px 6px 6px; }
+}
+@media screen and (max-width: @screen-lg) {
+  .col-lg-3 { border-radius: 6px 6px 0px 0px; }
+  .col-lg-9 { border-radius: 0px 0px 6px 6px; }
+}
+
+.results {
+  text-align: center;
+}
+  
+.le-steps {
+	.col-lg-3,
+	.col-lg-9   { padding: 30px; }
+	> .col-lg-3 { background: @dark; }
+	> .col-lg-9 { background: @palegrey; }
+}
+
+.le-steps {
+	color: @white;
+	.form-group {
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	h1 {
+		font-size: 26px;
+		text-align: center;
+	}
+}
+
+.list-steps {
+	// max-width: 500px;
+	padding-top:30px;
+
+	@media screen and (min-width: @screen-lg) {
+		li > a * { display: inline-block;}
+		b  { margin-right: 10px; }
+	}
+	@media screen and (max-width: @screen-lg) {
+		text-align: center;
+		b  {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 9px;
+		}
+		li {
+			padding: 0px 10px;
+			text-align: center;
+			display: inline-block;
+		}
+	}
+	
+	li {
+		margin-bottom: 10px;
+		&.active { b { background: @green; } }
+		a {
+			&:hover { text-decoration: none; }
+			color: @white;
+			text-transform: uppercase;
+		}
+	}
+	b {
+		background: @black;
+		text-align: center;
+		width: 40px;
+		height: 40px;
+		font-weight: normal;
+		display: block;
+		font-size: 15px;
+		line-height: 40px;
+		border-radius: 60px;
+	}
+	strong {
+		font-size: 12px;
+	}
+}
